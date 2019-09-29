@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #div-2 {
+                /*visibility: hidden;*/
+                display: none;
+            }
+        </style>
+        <!-- scripts are blocking - they will stop rendering of the page till they are fetched and executed -->
+        <script src="somefile.js"></script>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <button id="btn-toggle">Hide/show div-2</button>
+
+        <div id="div-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolores commodi accusamus necessitatibus, cum fuga adipisci ipsum quia voluptatibus mollitia, ipsam explicabo nostrum esse delectus architecto rem totam molestiae unde.
+        </div>
+        <div id="div-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolore quas aperiam culpa, fugit quis fuga error porro facere reprehenderit accusamus accusantium? Provident ipsum id pariatur temporibus aspernatur, perferendis repellendus.
+        </div>
+        <div id="div-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus dolorum sit, facere eveniet provident dolor veritatis, asperiores inventore cupiditate excepturi? Provident porro ratione tenetur odio voluptate voluptas praesentium vel
+        </div>
+    </body>
+
+    <script>
+        /**
+         * using addEventListener() we can set up multiple event handlers - preferred compared to on<event> properties like onclick, onmouseover etc.
+         */
+        // function handler() {
+
+        // };
+
+        // document.querySelector( '#btn-toggle' ).onclick = handler;
+        // document.querySelector( '#btn-toggle' ).onmouseover = handler;
+        
+        document.querySelector( '#btn-toggle' ).addEventListener( 'click', function() {
+            const div2 = document.querySelector( '#div-2' );
+
+            if( div2.style.display !== 'none' ) { // if it is visible
+                div2.style.display = 'none'; // make it invisible
+            } else {
+                div2.style.display = 'block';
+            }
+        });
+    </script>
+</html>

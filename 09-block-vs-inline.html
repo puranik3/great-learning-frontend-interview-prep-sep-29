@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            /* .container {
+                display: flex;
+            } */
+
+            .container {
+                font-size: 0;    
+            }
+
+            .container > * {
+                font-size: initial;
+            }
+
+            .container > div {
+                display: inline;
+            }
+
+            .container > span {
+                display: block;
+            }
+
+            .menu > li {
+                /* inline elements ignore certain box model properties like width */
+                display: inline;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 500px; border: 1px solid black;">Block div</div>
+        <div class="container">
+            <div>Lorem ipsum dolor sit amet</div>    
+            <div>Lorem ipsum dolor sit amet</div>    
+            <div>Lorem ipsum dolor sit amet</div>    
+        </div>
+
+        <div class="container">
+            <span>Some span 1</span>
+            <span>Some span 2</span>
+            <span>Some span 3</span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/contact">Contact us</a></li>
+        </ul>
+    </body>
+</html>

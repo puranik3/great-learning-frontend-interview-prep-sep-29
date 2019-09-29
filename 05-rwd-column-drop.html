@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .row {
+                overflow: auto; /* or hidden, or use a .clearfix class */
+            }
+
+            /* mobile-first approach */
+            /* styles for mobiles */
+            .col {
+                float: left;
+                width: 100%;
+                margin-right: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: justify;
+            }
+
+            /* then styles specific to desktops */
+            @media screen and ( min-width: 640px ) {
+                .col {
+                    width: 30%;
+                    margin-right: 5%;
+                }
+
+                .col:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui consectetur placeat. Quos necessitatibus blanditiis unde eaque impedit! Harum, nemo quam hic quo aut odio debitis asperiores eos earum voluptates.
+            </div>
+            <div class="col">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae assumenda nemo praesentium adipisci similique excepturi reiciendis eligendi reprehenderit expedita nesciunt. Quis tempore veniam nobis quo dicta quas molestias libero voluptate.
+            </div>
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eius dolorem at nisi culpa deserunt quis voluptatum nihil quam, officiis minus totam magni eaque, praesentium, reprehenderit ipsam atque labore. Accusamus.
+            </div>
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui consectetur placeat. Quos necessitatibus blanditiis unde eaque impedit! Harum, nemo quam hic quo aut odio debitis asperiores eos earum voluptates.
+            </div>
+            <div class="col">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae assumenda nemo praesentium adipisci similique excepturi reiciendis eligendi reprehenderit expedita nesciunt. Quis tempore veniam nobis quo dicta quas molestias libero voluptate.
+            </div>
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eius dolorem at nisi culpa deserunt quis voluptatum nihil quam, officiis minus totam magni eaque, praesentium, reprehenderit ipsam atque labore. Accusamus.
+            </div>
+        </div>
+    </body>
+</html>

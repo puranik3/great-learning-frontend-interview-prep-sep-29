@@ -1,7 +1,11 @@
+// resolve and reject are both asynchronous functions
+// they will both do their job when function call stack is empty
+
 function sum( x, y ) {
     const promise = new Promise(function( resolve, reject ) {
         if( typeof x !== 'number' || typeof y !== 'number' ) {
             reject( new Error( 'both arguments should be numbers' ) );
+            console.log( 'reject has been called' );
             return;
         }
 
@@ -18,7 +22,7 @@ function sum( x, y ) {
     return promise;
 }
 
-sum( 10, 20 )
+sum( 10, 'hello' )
     .then(function( result ) {
         console.log( result );
 
@@ -35,4 +39,12 @@ sum( 10, 20 )
     })
     .catch(function( error ) {
         console.log( error.message );
-    });
+    })
+    // .then(function() { // you can have more then() and catch() handlers too..
+
+    // })
+    // .catch(function( error ) {
+
+    // });
+
+console.log( 'end of script' );

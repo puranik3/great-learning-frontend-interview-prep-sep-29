@@ -111,11 +111,16 @@
             const data = [];
 
             let counter = 1;
-            function fetchMoreData() {
-                for( let i = 0; i < counter; i++ ) {
+            
+            debugger;
 
+            function fetchMoreData() {
+                for( let i = 0; i < counter; ) {
+                    console.log( i );
                 }
             }
+
+            // fetchMoreData();
 
             window.addEventListener( 'scroll', function() {
                 console.log( 'user is scrolling' );
